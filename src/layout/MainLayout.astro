@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+import Header from '@components/Header.astro';
+const { title } = Astro.props;
+const menuTabs = ["About me", "Contact"];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="header-hero">
+        <Header menuTabs={menuTabs}/>
+      </div>
+      <div class="content"><slot /></div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .layout {
+  }
+
+  .header-hero {
+    background: var(--light);
+    width: 100vw;
+    min-height: 25rem;
+  }
+
+  .content {
+  }
+
+  @media only screen and (min-width: 40em) {
+    .layout {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+</style>
