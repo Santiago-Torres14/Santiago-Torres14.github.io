@@ -15,14 +15,20 @@ const { menuTabs } = Astro.props;
         <Icon name="mdi:menu" />
       </button>
     </div>
-    <div class="menu">
+    <div id="menu-tab" class="menu hidden">
       <ul>
         {
           menuTabs.map((item) => (
-            <li><a>{item}</a></li>
+            <li>
+              <a>{item}</a>
+            </li>
           ))
         }
       </ul>
+    </div>
+    <div class="hero">
+      <h2>I am Software Engineer</h2>
+      <span>Perfection is clean software</span>
     </div>
   </div>
 </header>
@@ -47,28 +53,45 @@ const { menuTabs } = Astro.props;
   }
 
   .menu {
-      display: flex;
-      justify-content: flex-end;
-      padding: 1rem;
-      text-align: end;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.8rem;
+    text-align: end;
+    transition: 0.5s ease-in-out;
   }
 
   a {
-      font-size: 16px;
-      font-weight: 550;
-      font-style: italic;
+    font-size: 16px;
+    font-weight: 550;
+    font-style: italic;
   }
 
-  
+  .hidden {
+    opacity: 0;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  span {
+    font-style: italic;
+    color: var(--medium);
+    text-decoration: underline;
+  }
+
+  .hero {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+  }
 </style>
 
 <script>
   const button = document.getElementById('menu');
-  let is_clicked = false;
+  const menu_tab = document.getElementById('menu-tab');
+
   button?.addEventListener('click', () => {
-    is_clicked = !is_clicked;
-    if (is_clicked) {
-    } else {
-    }
+    menu_tab?.classList.toggle('hidden');
   });
 </script>

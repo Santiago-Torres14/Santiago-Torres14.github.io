@@ -3,7 +3,7 @@
     --medium: #CEAB93;
     --normal: #E3CAA5;
     --light: #FFFBE9;
-    --hidden: hidden;
+    --black: #FFFFF
 }
 
 html, body {
@@ -40,8 +40,15 @@ button {
 
 li {
     list-style-type: none;
+    margin: 1rem;
 }
 
 a {
     color: var(--medium);
+    transition: 0.3s ease-in-out;
 }
+
+a:hover, a:active {
+    color: var(--normal)
+}
+
