@@ -4,6 +4,18 @@
     --normal: #b3895d;
     --light: #FFFBE9;
     --black: #FFFFF
+    --fs-xl: clamp(2.5rem, 1vw + 1rem, 6rem);
+    --fs-l: 2.3rem;
+    --fs-600: 1.9rem;
+    --fs-400: 1rem;
+}
+
+@media (min-width: 40em) {
+    :root{
+        --fs-l: 3.1rem;
+        --fs-600: 2.5rem;
+       --fs-400:1.125rem; 
+    }
 }
 
 html, body {
@@ -17,6 +29,7 @@ html, body {
 
 h1, h2, h3, p {
     margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3 {
@@ -41,6 +54,11 @@ button {
 li {
     list-style-type: none;
     margin: 1rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 a {

@@ -27,7 +27,12 @@ const { menuTabs } = Astro.props;
       </ul>
     </div>
     <div class="hero">
-      <h2>I am Software Engineer</h2>
+      <div class="wrapper">
+        <h2>I am</h2>
+        <div class="animated-txt">
+          <span>software engineer</span>
+        </div>
+      </div>
       <span>Perfection is clean software</span>
     </div>
   </div>
@@ -60,8 +65,47 @@ const { menuTabs } = Astro.props;
     transition: 0.5s ease-in-out;
   }
 
+  .wrapper {
+    display: inline-flex;
+  }
+
+  .wrapper {
+    margin-left: 0.6rem;
+    overflow: hidden;
+  }
+
+  .animated-txt {
+      position: relative;
+  }
+
+  .animated-txt span {
+      font-size: var(--fs-l);
+  }
+
+  .animated-txt span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    background: var(--light);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid var(--medium);
+    animation: typing 6s steps(16) infinite;
+  }
+
+  @keyframes typing {
+    50% {
+      left: 100%;
+    }
+
+    0% {
+      left: 0%;
+    }
+  }
+
   a {
-    font-size: 16px;
+    font-size: var(--fs-400);
     font-weight: 550;
     font-style: italic;
   }
@@ -71,18 +115,15 @@ const { menuTabs } = Astro.props;
   }
 
   h2 {
-    font-size: 3rem;
-  }
-
-  span {
-    font-style: italic;
-    color: var(--medium);
-    font-size: 1.5rem;
+    font-size: var(--fs-l);
+    margin: 0;
+    padding: 0;
   }
 
   .hero {
     padding: 0 1rem;
     display: flex;
+    position: relative;
     flex-direction: column;
   }
 </style>
