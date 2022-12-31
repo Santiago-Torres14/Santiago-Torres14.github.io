@@ -8,26 +8,45 @@ const { menuTabs } = Astro.props;
 ---
 
 <header>
-  <div>
-    <div class="container">
-      <h1>Santiago.</h1>
-      <button id="menu">
-        <Icon name="mdi:menu" />
-      </button>
+  <div class="container">
+    <h1>Santiago.</h1>
+    <button id="menu">
+      <Icon name="mdi:menu" />
+    </button>
+  </div>
+  <div id="menu-tab" class="menu hidden">
+    <ul>
+      {
+        menuTabs.map((item) => (
+          <li>
+            <a>{item}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="hero">
+    <div class="wrapper">
+      <div>I am</div>
+      <div class="animated-txt">
+        <span>Software engineer</span>
+      </div>
     </div>
-    <div class="menu">
-      <ul>
-        {
-          menuTabs.map((item) => (
-            <li><a>{item}</a></li>
-          ))
-        }
-      </ul>
-    </div>
+    <span class="phrase">Perfection is clean software</span>
   </div>
 </header>
 
 <style>
+  header {
+    min-height: 20rem;
+    width: 100%;
+    background: var(--light);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
   [astro-icon] {
     color: var(--strong);
     width: 2rem;
@@ -47,28 +66,91 @@ const { menuTabs } = Astro.props;
   }
 
   .menu {
-      display: flex;
-      justify-content: flex-end;
-      padding: 1rem;
-      text-align: end;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.8rem;
+    text-align: end;
+    transition: 0.5s ease-in-out;
+  }
+
+  .wrapper {
+    font-weight: 900;
+    font-size: var(--fs-l);
+    color: var(--strong);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .animated-txt {
+    position: relative;
+  }
+
+  .animated-txt span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: var(--light);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid var(--medium);
+    animation: typing 6s steps(20) infinite;
+  }
+
+  @keyframes typing {
+    50% {
+      left: 9em;
+    }
+
+    0% {
+      left: 0;
+    }
   }
 
   a {
-      font-size: 16px;
-      font-weight: 550;
-      font-style: italic;
+    font-size: var(--fs-400);
+    font-weight: 550;
+    font-style: italic;
   }
 
-  
+  .hidden {
+    opacity: 0;
+  }
+
+  .phrase {
+    font-style: italic;
+    font-size: var(--fs-400);
+    margin-top: 0.5rem;
+  }
+
+  .hero {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 3rem;
+  }
+
+  @media (min-width: 30em) {
+    header {
+      min-height: 100%;
+    }
+
+    .hero {
+      height: 100%;
+      flex-grow: 1;
+    }
+  }
 </style>
 
 <script>
   const button = document.getElementById('menu');
-  let is_clicked = false;
+  const menu_tab = document.getElementById('menu-tab');
+
   button?.addEventListener('click', () => {
-    is_clicked = !is_clicked;
-    if (is_clicked) {
-    } else {
-    }
+    menu_tab?.classList.toggle('hidden');
   });
 </script>
