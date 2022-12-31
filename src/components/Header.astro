@@ -8,37 +8,45 @@ const { menuTabs } = Astro.props;
 ---
 
 <header>
-  <div>
-    <div class="container">
-      <h1>Santiago.</h1>
-      <button id="menu">
-        <Icon name="mdi:menu" />
-      </button>
-    </div>
-    <div id="menu-tab" class="menu hidden">
-      <ul>
-        {
-          menuTabs.map((item) => (
-            <li>
-              <a>{item}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-    <div class="hero">
-      <div class="wrapper">
-        <h2>I am</h2>
-        <div class="animated-txt">
-          <span>software engineer</span>
-        </div>
+  <div class="container">
+    <h1>Santiago.</h1>
+    <button id="menu">
+      <Icon name="mdi:menu" />
+    </button>
+  </div>
+  <div id="menu-tab" class="menu hidden">
+    <ul>
+      {
+        menuTabs.map((item) => (
+          <li>
+            <a>{item}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="hero">
+    <div class="wrapper">
+      <div>I am</div>
+      <div class="animated-txt">
+        <span>Software engineer</span>
       </div>
-      <span>Perfection is clean software</span>
     </div>
+    <span class="phrase">Perfection is clean software</span>
   </div>
 </header>
 
 <style>
+  header {
+    min-height: 20rem;
+    width: 100%;
+    background: var(--light);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
   [astro-icon] {
     color: var(--strong);
     width: 2rem;
@@ -66,41 +74,39 @@ const { menuTabs } = Astro.props;
   }
 
   .wrapper {
-    display: inline-flex;
-  }
-
-  .wrapper {
-    margin-left: 0.6rem;
+    font-weight: 900;
+    font-size: var(--fs-l);
+    color: var(--strong);
+    position: relative;
     overflow: hidden;
   }
 
   .animated-txt {
-      position: relative;
+    position: relative;
   }
 
-  .animated-txt span {
-      font-size: var(--fs-l);
-  }
-
-  .animated-txt span::after {
+  .animated-txt span::before {
     content: '';
     position: absolute;
     left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
     background: var(--light);
     overflow: hidden;
     height: 100%;
     width: 100%;
     border-left: 2px solid var(--medium);
-    animation: typing 6s steps(16) infinite;
+    animation: typing 6s steps(20) infinite;
   }
 
   @keyframes typing {
     50% {
-      left: 100%;
+      left: 9em;
     }
 
     0% {
-      left: 0%;
+      left: 0;
     }
   }
 
@@ -114,17 +120,29 @@ const { menuTabs } = Astro.props;
     opacity: 0;
   }
 
-  h2 {
-    font-size: var(--fs-l);
-    margin: 0;
-    padding: 0;
+  .phrase {
+    font-style: italic;
+    font-size: var(--fs-400);
+    margin-top: 0.5rem;
   }
 
   .hero {
     padding: 0 1rem;
     display: flex;
-    position: relative;
     flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 3rem;
+  }
+
+  @media (min-width: 30em) {
+    header {
+      min-height: 100%;
+    }
+
+    .hero {
+      height: 100%;
+      flex-grow: 1;
+    }
   }
 </style>
 

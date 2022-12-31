@@ -10,7 +10,7 @@
     --fs-400: 1rem;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 52em) {
     :root{
         --fs-l: 3.1rem;
         --fs-600: 2.5rem;
@@ -18,13 +18,24 @@
     }
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 html, body {
     margin: 0;
     width: 100%;
     font-size: 14px;
     font-family: Arial;
+    height: 100%;
     box-sizing: border-box;
     background: #ECECEB;
+}
+
+body {
+    min-height: 100%;
 }
 
 h1, h2, h3, p {
@@ -42,7 +53,9 @@ img {
 }
 
 header, section {
-    padding: 3rem 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 3rem;
 }
 
 button {

@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import Header from '@components/Header.astro';
 const { title } = Astro.props;
-const menuTabs = ["About me", "Contact", "Blog"];
+const menuTabs = ['About me', 'Contact', 'Blog'];
 ---
 
 <html lang="en">
@@ -14,8 +14,8 @@ const menuTabs = ["About me", "Contact", "Blog"];
   </head>
   <body>
     <div class="layout">
-      <div class="header-hero">
-        <Header menuTabs={menuTabs}/>
+      <div class="header">
+        <Header menuTabs={menuTabs} />
       </div>
       <div class="content"><slot /></div>
     </div>
@@ -24,25 +24,27 @@ const menuTabs = ["About me", "Contact", "Blog"];
 
 <style>
   .layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100vh;
   }
 
-  .header-hero {
-    background: var(--light);
-    width: 100vw;
-    min-height: 25em;
+  .layout > .header {
+      flex: 1 1 49%;
+      min-width: 45ch;
   }
 
-  .content {
+  .layout > .content {
+    flex: 1 1 50%;
+    min-width: 35ch;
   }
 
-  @media only screen and (min-width: 40em) {
-    .layout {
-      display: flex;
-      justify-content: space-around;
-      min-height: 100%;
-    }
-
-    .header-hero {
-    }
+  @media (min-width: 30em) {
+      .header {
+          position: sticky;
+      }
   }
+
+
 </style>
