@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@types/mdx": "^2.0.3",
+    "@types/node": "^18.11.18",
     "eslint": "^8.30.0",
     "prettier": "^2.8.1",
     "prettier-plugin-astro": "^0.7.0"
