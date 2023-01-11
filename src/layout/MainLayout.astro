@@ -27,12 +27,11 @@ const menuTabs = ['About me', 'Contact', 'Blog'];
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 100vh;
   }
 
   .layout > .header {
-      flex: 1 1 49%;
-      min-width: 45ch;
+    flex: 1 1 49%;
+    min-width: 40ch;
   }
 
   .layout > .content {
@@ -40,11 +39,16 @@ const menuTabs = ['About me', 'Contact', 'Blog'];
     min-width: 35ch;
   }
 
-  @media (min-width: 30em) {
-      .header {
-          position: sticky;
-      }
+  @media (min-width: 40em) {
+    .layout {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .content {
+        overflow-y: scroll;
+        height: 100%;
+    }
   }
-
-
 </style>
