@@ -4,14 +4,33 @@ import Section from '@components/Section.astro';
 
 <Section title="About me">
   <div class="container">
-  <img />
+    <div class="img-container">
+      <img src="/images/IMG_PROFILE.JPG" />
+    </div>
+    <div>
+
+    </div>
   </div>
 </Section>
 
 <style>
-.container {
+  .container {
     min-height: 25rem;
-}
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .img-container {
+      max-width: 13rem;
+  }
+
+  .img-container img {
+      width: 100%;
+      border-radius: 50%;
+      object-fit: contain;
+      border: 1px solid var(--strong);
+  }
 </style>
 
 <script></script>
