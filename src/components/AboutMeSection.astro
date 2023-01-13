@@ -1,35 +1,88 @@
 ---
 import Section from '@components/Section.astro';
+import { Icon } from 'astro-icon';
 ---
 
 <Section title="About me">
-  <div class="container">
-    <div class="img-container">
-      <img src="/images/IMG_PROFILE.JPG" />
+  <div class="main-container">
+    <div class="profile-container">
+      <div class="img-container">
+        <img src="/images/IMG_PROFILE.JPG" />
+      </div>
+      <h2>Santiago Torres Aragon</h2>
     </div>
-    <div>
-
+    <div class="focus-container">
+      <a href="https://www.linkedin.com/in/santiago-torres-621632216/">
+        <Icon name="mdi:linkedin" />
+      </a>
+      <a href="https://github.com/Santiago-Torres14/">
+        <Icon name="mdi:github-box" />
+      </a>
+    </div>
+    <div class="description-container">
+      <p>
+        Hey there, my name is everywhere in this page so let's skip that part.
+        I'm engineer with focus on low system, backend development and cloud
+        solutions. I am enthusiast when it comes to software, as well as really
+        passionate to solve new and demanding problems with the help of
+        technology. I'm currently taking two BA; system engineer and computer
+        science, also self-taught getting into data science.
+      </p>
     </div>
   </div>
 </Section>
 
 <style>
-  .container {
-    min-height: 25rem;
-    display: flex;
-    flex-direction: column;
+  [astro-icon] {
+    color: var(--strong);
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .main-container {
+    display: grid;
+    width: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
     margin-top: 1rem;
   }
 
+  .focus-container {
+    justify-self: center;
+  }
+
+  .profile-container {
+    justify-self: center;
+  }
+
+  .profile-container h2 {
+    font-size: var(--fs-500);
+  }
+
   .img-container {
-      max-width: 13rem;
+    max-width: 13rem;
+    margin: auto;
   }
 
   .img-container img {
-      width: 100%;
-      border-radius: 50%;
-      object-fit: contain;
-      border: 1px solid var(--strong);
+    width: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 1px solid var(--strong);
+  }
+
+  .focus-container {
+    display: flex;
+  }
+
+  .description-container {
+    justify-self: center;
+    max-width: 47ch;
+  }
+
+  .description-container p {
+    font-size: var(--fs-400);
+    text-align: justify;
   }
 </style>
 
