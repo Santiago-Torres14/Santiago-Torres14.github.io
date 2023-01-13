@@ -7,14 +7,16 @@
     --fs-xl: clamp(2.5rem, 1vw + 1rem, 6rem);
     --fs-l: 2.3rem;
     --fs-600: 1.9rem;
-    --fs-400: 1rem;
+    --fs-500: 1.4rem;
+    --fs-400: 1.2rem;
 }
 
 @media (min-width: 52em) {
     :root{
-        --fs-l: 3.1rem;
-        --fs-600: 2.5rem;
-       --fs-400:1.125rem; 
+       --fs-l: 3.1rem;
+       --fs-600: 2.5rem;
+       --fs-500: 1.8rem;
+       --fs-400:1.3rem; 
     }
 }
 
