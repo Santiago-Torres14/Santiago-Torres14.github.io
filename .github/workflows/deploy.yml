@@ -24,7 +24,7 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
       - name: format and lint
-        uses: Borales/actions-yarn@4.2.0
+        uses: Borales/actions-yarn@v4.2.0
         with: 
           cmd: style
       - name: Install, build, and upload your site
