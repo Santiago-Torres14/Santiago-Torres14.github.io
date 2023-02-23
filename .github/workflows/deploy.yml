@@ -5,6 +5,9 @@ on:
   # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches: [main]
+  # Trigger the workflow every time a pull request to the 'main' branch is created
+  pull_request:
+    branches: [main]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
@@ -20,6 +23,10 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+      - name: format and lint
+        uses: borales/actions-yarn@4.2.0
+        with: 
+          cmd: style
       - name: Install, build, and upload your site
         uses: withastro/action@v0
         # with:
