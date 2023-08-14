@@ -4,12 +4,12 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
   push:
-    branches: [ main ]
+    branches: [main]
     tags:
       - v1.**.**
   # Trigger the workflow every time a pull request to the 'main' branch is created
   pull_request:
-    branches: [ main ]
+    branches: [main]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
@@ -36,7 +36,7 @@ jobs:
         with:
           cmd: style
   deploy:
-    needs: [build, lint-format] 
+    needs: [build, lint-format]
     runs-on: ubuntu-latest
     if: github.ref_type == 'tag' && startsWith(github.ref_name, 'v1.')
     environment:
