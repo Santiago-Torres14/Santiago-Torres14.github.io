@@ -27,16 +27,12 @@ jobs:
         uses: actions/checkout@v3
       - name: Install, build, and upload your site
         uses: withastro/action@v0
-  lint-format:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: format and lint
         uses: Borales/actions-yarn@v4.2.0
         with:
           cmd: style
   deploy:
-    needs: [build, lint-format]
+    needs: build
     runs-on: ubuntu-latest
     if: github.ref_type == 'tag' && startsWith(github.ref_name, 'v1.')
     environment:
