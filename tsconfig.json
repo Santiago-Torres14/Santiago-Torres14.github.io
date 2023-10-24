@@ -2,7 +2,6 @@
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
     "jsx": "react",
-    "importsNotUsedAsValues": "error",
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
