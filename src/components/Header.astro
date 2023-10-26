@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 
 interface Props {
   menuTabs: string[];
@@ -10,11 +10,11 @@ const { menuTabs } = Astro.props;
 <header>
   <div class="container">
     <h1>Santiago.</h1>
-    <button id="menu">
+    <button id="menubutton">
       <Icon name="mdi:menu" />
     </button>
   </div>
-  <div id="menu-tab" class="menu hidden">
+  <div id="menutab" class="menu hidden">
     <ul>
       {
         menuTabs.map((item) => (
@@ -86,7 +86,7 @@ const { menuTabs } = Astro.props;
   }
 
   .animated-txt span::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -147,10 +147,10 @@ const { menuTabs } = Astro.props;
 </style>
 
 <script>
-  const button = document.getElementById('menu');
-  const menu_tab = document.getElementById('menu-tab');
+  const menubutton = document.getElementById("menubutton");
+  const menutab = document.getElementById("menutab");
 
-  button?.addEventListener('click', () => {
-    menu_tab?.classList.toggle('hidden');
+  menubutton?.addEventListener("click", () => {
+    menutab?.classList.toggle("hidden");
   });
 </script>

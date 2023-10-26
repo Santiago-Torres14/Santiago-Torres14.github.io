@@ -1,17 +1,17 @@
-require('eslint-plugin-astro');
+require("eslint-plugin-astro");
 module.exports = {
-  extends: ['plugin:astro/recommended', 'plugin:prettier/recommended'],
+  extends: ["plugin:astro/recommended"],
   overrides: [
     {
       // Define the configuration for `.astro` file.
-      files: ['*.astro'],
+      files: ["*.astro"],
       // Allows Astro components to be parsed.
-      parser: 'astro-eslint-parser',
+      parser: "astro-eslint-parser",
       // Parse the script in `.astro` as TypeScript by adding the following configuration.
       // It's the setting you need when using TypeScript.
       parserOptions: {
-        parser: '@typescript-eslint/parser',
-        extraFileExtensions: ['.astro'],
+        parser: "@typescript-eslint/parser",
+        extraFileExtensions: [".astro"],
       },
       rules: {
         // override/add rules settings here, such as:
