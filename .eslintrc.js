@@ -1,9 +1,6 @@
 require('eslint-plugin-astro');
 module.exports = {
   extends: ['plugin:astro/recommended', 'plugin:prettier/recommended'],
-  rules: {
-    'prettier/prettier': 'error',
-  },
   overrides: [
     {
       // Define the configuration for `.astro` file.
