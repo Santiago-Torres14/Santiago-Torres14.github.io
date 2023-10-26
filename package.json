@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error no test specified\" && exit 1",
-    "lint": "npx eslint --ext .js,.astro src",
-    "format": "npx prettier . --write",
+    "lint": "yarn eslint --ext .js,.astro src",
+    "format": "yarn prettier . --write",
     "style": "yarn run format . && yarn run lint .",
     "dev": "astro dev",
     "start": "astro dev",
@@ -28,7 +28,7 @@
     "eslint-plugin-astro": "^0.29.1",
     "eslint-plugin-prettier": "5.0.0",
     "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.7.0",
+    "prettier-plugin-astro": "0.12.1",
     "typescript": "^5.2.2"
   }
 }
