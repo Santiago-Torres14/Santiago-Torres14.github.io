@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.2.1",
-    "astro": "^3.3.3",
+    "astro": "^3.4.0",
     "astro-icon": "^0.8.0",
     "rollup": "^3.29.2"
   },
