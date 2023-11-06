@@ -21,7 +21,7 @@
     "rollup": "^4.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20.8.9",
+    "@types/node": "^20.8.10",
     "@typescript-eslint/parser": "6.9.1",
     "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
