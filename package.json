@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error no test specified\" && exit 1",
     "lint": "yarn eslint --ext .js,.astro src",
-    "format": "yarn prettier . --write",
+    "format": "yarn prettier --write . --plugin=prettier-plugin-astro",
     "style": "yarn run format . && yarn run lint .",
     "dev": "astro dev",
     "start": "astro dev",

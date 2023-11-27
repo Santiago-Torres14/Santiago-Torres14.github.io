@@ -1,0 +1,28 @@
+---
+type Props = {
+  socialMediaLink: string;
+  socialMediaIcon: string;
+  message: string;
+};
+
+const { socialMediaLink, socialMediaIcon, message } = Astro.props;
+---
+
+<a href={socialMediaLink}>
+  <div class="content"></div>
+</a>
+
+<style>
+  [astro-icon] {
+    color: var(--strong);
+    width: 3rem;
+    height: 3rem;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .content {
+    display: flex;
+  }
+</style>

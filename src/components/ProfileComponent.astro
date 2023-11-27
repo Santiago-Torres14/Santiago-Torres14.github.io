@@ -1,0 +1,32 @@
+---
+import type { Props } from "astro";
+---
+
+<div class="profile-container">
+  <div class="img-container">
+    <img src="/images/IMG_PROFILE.JPG" />
+  </div>
+  <h2>Santiago Torres</h2>
+</div>
+
+<style>
+  .profile-container {
+    justify-self: center;
+  }
+
+  .profile-container h2 {
+    font-size: var(--fs-500);
+  }
+
+  .img-container {
+    max-width: 13rem;
+    margin: auto;
+  }
+
+  .img-container img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 1px solid var(--strong);
+  }
+</style>
