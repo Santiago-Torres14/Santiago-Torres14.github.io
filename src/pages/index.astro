@@ -1,10 +1,18 @@
 ---
 import MainLayout from "@layout/MainLayout.astro";
 import AboutMeSection from "@components/AboutMeSection.astro";
+import ContactMeSection from "@components/ContactMeSection.astro";
 ---
 
 <MainLayout title="index">
-  <AboutMeSection />
+  <div class="content">
+    <AboutMeSection />
+    <ContactMeSection />
+  </div>
 </MainLayout>
 
-<style></style>
+<style>
+  .content {
+    display: grid;
+  }
+</style>

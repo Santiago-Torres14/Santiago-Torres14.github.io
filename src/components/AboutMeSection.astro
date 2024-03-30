@@ -1,16 +1,12 @@
 ---
 import Section from "@components/Section.astro";
+import ProfileComponent from "./ProfileComponent.astro";
 import { Icon } from "astro-icon";
 ---
 
 <Section title="About me">
   <div class="main-container">
-    <div class="profile-container">
-      <div class="img-container">
-        <img src="/images/IMG_PROFILE.JPG" />
-      </div>
-      <h2>Santiago Torres Aragon</h2>
-    </div>
+    <ProfileComponent />
     <div class="focus-container">
       <a href="https://www.linkedin.com/in/santiago-torres-621632216/">
         <Icon name="mdi:linkedin" />
@@ -47,10 +43,6 @@ import { Icon } from "astro-icon";
     margin-top: 1rem;
   }
 
-  .focus-container {
-    justify-self: center;
-  }
-
   .profile-container {
     justify-self: center;
   }
@@ -71,10 +63,6 @@ import { Icon } from "astro-icon";
     border: 1px solid var(--strong);
   }
 
-  .focus-container {
-    display: flex;
-  }
-
   .description-container {
     justify-self: center;
     max-width: clamp(55ch, 60vw, 80ch);
@@ -83,5 +71,10 @@ import { Icon } from "astro-icon";
   .description-container p {
     font-size: var(--fs-400);
     text-align: justify;
+  }
+
+  .focus-container {
+    justify-self: center;
+    display: flex;
   }
 </style>
