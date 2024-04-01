@@ -1419,12 +1419,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.11.17":
-  version: 20.11.17
-  resolution: "@types/node@npm:20.11.17"
+"@types/node@npm:^20.12.2":
+  version: 20.12.2
+  resolution: "@types/node@npm:20.12.2"
   dependencies:
-    undici-types: "npm:~5.26.4"
-  checksum: 1f30dae80b416cbf38f133a619ffb0e9fb9e7bc58f82d900bf73816ae5781740c4640892bf5971dd9c12570d5d05241646be3e7540bb4e059322ec6af4e51e15
+    undici-types: ~5.26.4
+  checksum: 8/3242ab04fe69ae32a2da29a7a2fce41fccb370bc1189de43d2dfbb491bd3253d3ee2070cbb5613061148e4862fdaa9cf62722c43128ce5c7d33fe83750956613
   languageName: node
   linkType: hard
 
@@ -1656,7 +1656,7 @@ __metadata:
   resolution: "Santiago-Torres14.github.io@workspace:."
   dependencies:
     "@astrojs/check": 0.5.10
-    "@types/node": ^20.11.17
+    "@types/node": ^20.12.2
     "@typescript-eslint/parser": 7.4.0
     astro: 4.5.12
     astro-icon: ^0.8.2
