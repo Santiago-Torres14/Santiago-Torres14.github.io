@@ -60,6 +60,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/compiler@npm:^2.7.1":
+  version: 2.7.1
+  resolution: "@astrojs/compiler@npm:2.7.1"
+  checksum: 8/da3c53702b67642f3ea58fc91b6ccd49f07b91199108497b66193289f280765283a16e2b42f4ad3a588232dda368e719480058bc6910e7282b9cffe7170ea6e7
+  languageName: node
+  linkType: hard
+
 "@astrojs/internal-helpers@npm:0.4.0":
   version: 0.4.0
   resolution: "@astrojs/internal-helpers@npm:0.4.0"
@@ -101,29 +108,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:4.3.2":
-  version: 4.3.2
-  resolution: "@astrojs/markdown-remark@npm:4.3.2"
+"@astrojs/markdown-remark@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@astrojs/markdown-remark@npm:5.0.0"
   dependencies:
-    "@astrojs/prism": "npm:^3.0.0"
-    github-slugger: "npm:^2.0.0"
-    hast-util-from-html: "npm:^2.0.0"
-    hast-util-to-text: "npm:^4.0.0"
-    import-meta-resolve: "npm:^4.0.0"
-    mdast-util-definitions: "npm:^6.0.0"
-    rehype-raw: "npm:^7.0.0"
-    rehype-stringify: "npm:^10.0.0"
-    remark-gfm: "npm:^4.0.0"
-    remark-parse: "npm:^11.0.0"
-    remark-rehype: "npm:^11.0.0"
-    remark-smartypants: "npm:^2.0.0"
-    shiki: "npm:^1.1.2"
-    unified: "npm:^11.0.4"
-    unist-util-remove-position: "npm:^5.0.0"
-    unist-util-visit: "npm:^5.0.0"
-    unist-util-visit-parents: "npm:^6.0.0"
-    vfile: "npm:^6.0.1"
-  checksum: 39a3add360fec697a46e05f23b11752b26188b1ce034399de52c87157e970f145a573f795337eef1508f3e5b749de489c1efdc2dd8653ccbf5da3f312bf35cae
+    "@astrojs/prism": ^3.0.0
+    github-slugger: ^2.0.0
+    hast-util-from-html: ^2.0.0
+    hast-util-to-text: ^4.0.0
+    import-meta-resolve: ^4.0.0
+    mdast-util-definitions: ^6.0.0
+    rehype-raw: ^7.0.0
+    rehype-stringify: ^10.0.0
+    remark-gfm: ^4.0.0
+    remark-parse: ^11.0.0
+    remark-rehype: ^11.0.0
+    remark-smartypants: ^2.0.0
+    shiki: ^1.1.2
+    unified: ^11.0.4
+    unist-util-remove-position: ^5.0.0
+    unist-util-visit: ^5.0.0
+    unist-util-visit-parents: ^6.0.0
+    vfile: ^6.0.1
+  checksum: 8/51cc9686edaa6751628bebfdb47b4c225bef02f87ea7f8867340f686b152aa7c583a0d23ce0eaf0aa49f8cdf71db1fa3ef2ae45a2548e239e7792a9a726a4556
   languageName: node
   linkType: hard
 
@@ -1567,7 +1574,7 @@ __metadata:
     "@astrojs/check": 0.5.10
     "@types/node": ^20.12.2
     "@typescript-eslint/parser": 7.4.0
-    astro: 4.5.12
+    astro: 4.5.16
     astro-icon: ^0.8.2
     eslint: ^8.56.0
     eslint-config-prettier: ^9.1.0
@@ -1759,79 +1766,79 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.5.12":
-  version: 4.5.12
-  resolution: "astro@npm:4.5.12"
+"astro@npm:4.5.16":
+  version: 4.5.16
+  resolution: "astro@npm:4.5.16"
   dependencies:
-    "@astrojs/compiler": "npm:^2.7.0"
-    "@astrojs/internal-helpers": "npm:0.4.0"
-    "@astrojs/markdown-remark": "npm:4.3.2"
-    "@astrojs/telemetry": "npm:3.0.4"
-    "@babel/core": "npm:^7.24.3"
-    "@babel/generator": "npm:^7.23.3"
-    "@babel/parser": "npm:^7.23.3"
-    "@babel/plugin-transform-react-jsx": "npm:^7.22.5"
-    "@babel/traverse": "npm:^7.23.3"
-    "@babel/types": "npm:^7.23.3"
-    "@types/babel__core": "npm:^7.20.4"
-    acorn: "npm:^8.11.2"
-    aria-query: "npm:^5.3.0"
-    axobject-query: "npm:^4.0.0"
-    boxen: "npm:^7.1.1"
-    chokidar: "npm:^3.5.3"
-    ci-info: "npm:^4.0.0"
-    clsx: "npm:^2.0.0"
-    common-ancestor-path: "npm:^1.0.1"
-    cookie: "npm:^0.6.0"
-    cssesc: "npm:^3.0.0"
-    debug: "npm:^4.3.4"
-    deterministic-object-hash: "npm:^2.0.1"
-    devalue: "npm:^4.3.2"
-    diff: "npm:^5.1.0"
-    dlv: "npm:^1.1.3"
-    dset: "npm:^3.1.3"
-    es-module-lexer: "npm:^1.4.1"
-    esbuild: "npm:^0.19.6"
-    estree-walker: "npm:^3.0.3"
-    execa: "npm:^8.0.1"
-    fast-glob: "npm:^3.3.2"
-    flattie: "npm:^1.1.0"
-    github-slugger: "npm:^2.0.0"
-    gray-matter: "npm:^4.0.3"
-    html-escaper: "npm:^3.0.3"
-    http-cache-semantics: "npm:^4.1.1"
-    js-yaml: "npm:^4.1.0"
-    kleur: "npm:^4.1.4"
-    magic-string: "npm:^0.30.3"
-    mime: "npm:^3.0.0"
-    ora: "npm:^7.0.1"
-    p-limit: "npm:^5.0.0"
-    p-queue: "npm:^8.0.1"
-    path-to-regexp: "npm:^6.2.1"
-    preferred-pm: "npm:^3.1.2"
-    prompts: "npm:^2.4.2"
-    rehype: "npm:^13.0.1"
-    resolve: "npm:^1.22.4"
-    semver: "npm:^7.5.4"
-    sharp: "npm:^0.32.6"
-    shiki: "npm:^1.1.2"
-    string-width: "npm:^7.0.0"
-    strip-ansi: "npm:^7.1.0"
-    tsconfck: "npm:^3.0.0"
-    unist-util-visit: "npm:^5.0.0"
-    vfile: "npm:^6.0.1"
-    vite: "npm:^5.1.4"
-    vitefu: "npm:^0.2.5"
-    which-pm: "npm:^2.1.1"
-    yargs-parser: "npm:^21.1.1"
-    zod: "npm:^3.22.4"
-    zod-to-json-schema: "npm:^3.22.4"
+    "@astrojs/compiler": ^2.7.1
+    "@astrojs/internal-helpers": 0.4.0
+    "@astrojs/markdown-remark": 5.0.0
+    "@astrojs/telemetry": 3.0.4
+    "@babel/core": ^7.24.3
+    "@babel/generator": ^7.23.3
+    "@babel/parser": ^7.23.3
+    "@babel/plugin-transform-react-jsx": ^7.22.5
+    "@babel/traverse": ^7.23.3
+    "@babel/types": ^7.23.3
+    "@types/babel__core": ^7.20.4
+    acorn: ^8.11.2
+    aria-query: ^5.3.0
+    axobject-query: ^4.0.0
+    boxen: ^7.1.1
+    chokidar: ^3.5.3
+    ci-info: ^4.0.0
+    clsx: ^2.0.0
+    common-ancestor-path: ^1.0.1
+    cookie: ^0.6.0
+    cssesc: ^3.0.0
+    debug: ^4.3.4
+    deterministic-object-hash: ^2.0.1
+    devalue: ^4.3.2
+    diff: ^5.1.0
+    dlv: ^1.1.3
+    dset: ^3.1.3
+    es-module-lexer: ^1.4.1
+    esbuild: ^0.19.6
+    estree-walker: ^3.0.3
+    execa: ^8.0.1
+    fast-glob: ^3.3.2
+    flattie: ^1.1.0
+    github-slugger: ^2.0.0
+    gray-matter: ^4.0.3
+    html-escaper: ^3.0.3
+    http-cache-semantics: ^4.1.1
+    js-yaml: ^4.1.0
+    kleur: ^4.1.4
+    magic-string: ^0.30.3
+    mime: ^3.0.0
+    ora: ^7.0.1
+    p-limit: ^5.0.0
+    p-queue: ^8.0.1
+    path-to-regexp: ^6.2.1
+    preferred-pm: ^3.1.2
+    prompts: ^2.4.2
+    rehype: ^13.0.1
+    resolve: ^1.22.4
+    semver: ^7.5.4
+    sharp: ^0.32.6
+    shiki: ^1.1.2
+    string-width: ^7.0.0
+    strip-ansi: ^7.1.0
+    tsconfck: ^3.0.0
+    unist-util-visit: ^5.0.0
+    vfile: ^6.0.1
+    vite: ^5.1.4
+    vitefu: ^0.2.5
+    which-pm: ^2.1.1
+    yargs-parser: ^21.1.1
+    zod: ^3.22.4
+    zod-to-json-schema: ^3.22.4
   dependenciesMeta:
     sharp:
       optional: true
   bin:
     astro: astro.js
-  checksum: 9963135ca5722c90fa4b8492c302a9fe7b260ea5ec05495258821902802930d07b86b3db20193bd489f0dd1bdbeedd96a8f183e052710ae12b1665ae6dad4ddc
+  checksum: 8/dde20ee8c03f60ddd7c7bd2ab66ee29bf2237cd61211bfec4b4c1d10ab9809ff6a3ef74ab06963999ef6850505af65235d9f0020be20a876d56816bc1800f88b
   languageName: node
   linkType: hard
 
@@ -5564,7 +5571,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@npm%3A^1.22.4#~builtin<compat/resolve>":
+"resolve@patch:resolve@^1.22.4#~builtin<compat/resolve>":
   version: 1.22.8
   resolution: "resolve@patch:resolve@npm%3A1.22.8#~builtin<compat/resolve>::version=1.22.8&hash=c3c19d"
   dependencies:
